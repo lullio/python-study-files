@@ -15,4 +15,19 @@ print(f"Está incluído no plano: {'Sim' if plan_included else 'Não'}")
 if rating >= 8.0:
    print(f"O filme {name} é muito bom, tem avaliação {rating}")
 else:
-   print("O filme {name} não tem uma boa avalição: {rating}")
+   print(f"O filme {name} não tem uma boa avalição: {rating}")
+
+   
+
+num1 = float(input("Digite o primeiro número: \n"))
+num2 = float(input("Digite o segundo número: \n"))
+operation = input("Digite a operação a ser realizada: (+ * /)\n")
+
+if operation == "+":
+   print(f"A soma dos números é igual a {num1 + num2}")
+elif operation == "*":
+   print(f"A multiplicação dos números é igual a {num1 * num2}")
+elif operation == "/":
+   print(f"A divisão dos números é igual a {num1 / num2}:.2f") # .2f = duas casas decimais
+else:
+   print("Operação inválida")

@@ -60,4 +60,34 @@ def print_movies(movies):
 movies_list = ["Matrix", "Inception", "Interstellar"]
 print_movies(movies_list)  # passando uma lista de filmes para a função (argumento)
 
-# 8 - Função para encontrar um filme pelo nome (usa parâmetro e retorna o filme ou None)
+# 8 - Função com parâmetro default
+def greet(name="usuário"):
+    print(f"Olá, {name}!")  # Imprime uma saudação com o nome fornecido ou o padrão "usuário"
+greet()  # Chama a função sem passar um nome, usando o valor padrão  
+greet("Alice")  # Chama a função passando um nome específico
+# 9 - Função com múltiplos parâmetros
+def multiply(a, b=1, c=1):
+    return a * b * c  # Multiplica os três parâmetros 
+result = multiply(2, 3)  # Passa dois parâmetros, o terceiro usa o valor padrão
+print(f"O resultado da multiplicação é: {result}")  # Imprime o resultado da multiplicação      
+
+# 10 - Função com retorno de múltiplos valores
+def get_movie_info(title, year):
+    return title, year  # Retorna o título e o ano do filme como uma tupla
+movie_title, movie_year = get_movie_info("Inception", 2010)  # Recebe os valores retornados
+print(f"Filme: {movie_title}, Ano: {movie_year}")  # Imprime o título e o ano do filme 
+
+# 11 - Função com argumentos variáveis
+def print_movies(*movies):
+    for movie in movies:  # Itera sobre os filmes passados como argumentos
+        print(movie)
+print_movies("Matrix", "Inception", "Interstellar")  # Passa múltiplos filmes como argumentos
+
+# 12 - Função com argumentos nomeados
+def print_movie_info(title, year, director=None):
+    info = f"Filme: {title}, Ano: {year}"
+    if director:  # Verifica se o diretor foi fornecido
+        info += f", Diretor: {director}"
+    print(info)
+print_movie_info("Inception", 2010, "Christopher Nolan")  # Passa todos os argumentos
+print_movie_info("Interstellar", 2014)  # Passa apenas título e ano, sem diretor  

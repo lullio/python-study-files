@@ -76,18 +76,3 @@ def get_movie_info(title, year):
     return title, year  # Retorna o título e o ano do filme como uma tupla
 movie_title, movie_year = get_movie_info("Inception", 2010)  # Recebe os valores retornados
 print(f"Filme: {movie_title}, Ano: {movie_year}")  # Imprime o título e o ano do filme 
-
-# 11 - Função com argumentos variáveis
-def print_movies(*movies):
-    for movie in movies:  # Itera sobre os filmes passados como argumentos
-        print(movie)
-print_movies("Matrix", "Inception", "Interstellar")  # Passa múltiplos filmes como argumentos
-
-# 12 - Função com argumentos nomeados
-def print_movie_info(title, year, director=None):
-    info = f"Filme: {title}, Ano: {year}"
-    if director:  # Verifica se o diretor foi fornecido
-        info += f", Diretor: {director}"
-    print(info)
-print_movie_info("Inception", 2010, "Christopher Nolan")  # Passa todos os argumentos
-print_movie_info("Interstellar", 2014)  # Passa apenas título e ano, sem diretor  
